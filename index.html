@@ -15,10 +15,11 @@
   --teal:#2A7A72;--teal-bg:#1A3A3A;
   --orange:#C45A35;--orange-bg:#3D2418;
   --red:#A03038;--red-bg:#2E1518;
+  --sage:#4A6B5A;--sage-soft:#DCE8E2;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:transparent;color:var(--cream);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse 110% 70% at 15% 0%,rgba(46,43,39,0.95) 0%,transparent 55%),radial-gradient(ellipse 90% 50% at 90% 100%,rgba(62,50,38,0.4) 0%,transparent 50%),radial-gradient(ellipse 60% 40% at 50% 50%,rgba(28,26,24,0.5) 0%,transparent 70%),#0B0909}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse 110% 70% at 15% 0%,rgba(46,43,39,0.95) 0%,transparent 55%),radial-gradient(ellipse 90% 50% at 90% 100%,rgba(62,50,38,0.4) 0%,transparent 50%),#0B0909}
 .nav{position:sticky;top:0;z-index:100;background:rgba(46,43,39,0.94);border-bottom:1px solid var(--border);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 4px 24px rgba(0,0,0,0.4)}
 .nav::-webkit-scrollbar{display:none}
 .nav-inner{display:flex;gap:4px;padding:10px 12px;min-width:max-content}
@@ -26,9 +27,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
 .nav a:hover,.nav a:focus{background:rgba(62,55,48,0.9);color:var(--champagne);outline:none}
 header{padding:24px 16px 12px;background:linear-gradient(180deg,var(--olive) 0%,transparent 100%)}
 header h1{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--cream)}
-header .principle{font-size:13px;color:var(--champagne);margin-bottom:8px;font-weight:500}
+header .principle{font-size:14px;color:var(--champagne);margin-bottom:8px;font-weight:600;letter-spacing:0.02em}
 header .caveat{font-size:12px;color:var(--taupe);font-style:italic}
-.disclaimer{background:rgba(46,43,39,0.95);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin:12px 16px;font-size:12px;color:var(--cream-dim);line-height:1.55;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.disclaimer{background:rgba(46,43,39,0.95);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin:12px 16px;font-size:12px;color:var(--cream-dim);line-height:1.55;backdrop-filter:blur(18px)}
 .disclaimer strong{color:var(--champagne)}
 main{padding:0 0 80px}
 .section{border-bottom:1px solid rgba(62,55,48,0.5)}
@@ -43,223 +44,281 @@ main{padding:0 0 80px}
 .tag-red{background:var(--red-bg);color:#E88A92}
 .section-body{display:none;padding:0 16px 20px}
 .section.open .section-body{display:block}
-.card{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 6px 24px rgba(0,0,0,0.35)}
+.card{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;backdrop-filter:blur(18px);box-shadow:0 6px 24px rgba(0,0,0,0.35)}
 .card h3{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--cream)}
+.card h4{font-size:13px;font-weight:600;margin:10px 0 6px;color:var(--champagne)}
 .card p,.card li{font-size:14px;color:var(--cream-dim);margin-bottom:4px}
-.card ul{padding-left:18px}
+.card ul{padding-left:18px;margin-bottom:8px}
 .highlight{border-left:3px solid var(--gold);padding-left:12px;margin:10px 0}
 .highlight.red{border-color:var(--red)}
-.key-value{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid rgba(62,55,48,0.45);font-size:13px}
-.key-value:last-child{border-bottom:none}
-.key-value .k{color:var(--taupe-light)}
-.key-value .v{color:var(--cream);font-weight:600;text-align:right;max-width:58%}
-.matrix-row{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px}
-.matrix-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--taupe);margin-bottom:6px}
-.matrix-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.matrix-col h4{font-size:12px;font-weight:600;color:var(--champagne);margin-bottom:4px}
-.matrix-col p{font-size:12px;color:var(--cream-dim);margin:0}
-.cat-header{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--taupe);margin:16px 0 8px;padding-bottom:4px;border-bottom:1px solid rgba(62,55,48,0.45)}
-.product-card{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px}
-.product-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px}
-.product-name{font-size:14px;font-weight:600;color:var(--cream)}
-.badge{flex-shrink:0;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;padding:3px 6px;border-radius:4px}
+.highlight.teal{border-color:var(--teal)}
+.box-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+@media(max-width:420px){.box-pair{grid-template-columns:1fr}}
+.route-box{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:10px;padding:12px}
+.route-box.accent{border-color:var(--sage);background:rgba(74,107,90,0.15)}
+.route-box h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--champagne);margin-bottom:6px}
+.route-box p{font-size:13px;color:var(--cream-dim);margin:0}
+.check-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(62,55,48,0.45);font-size:14px;color:var(--cream-dim)}
+.check-item:last-child{border-bottom:none}
+.check-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--olive);color:var(--champagne);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.pathway{border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px}
+.pathway.solid{border-color:var(--teal);background:rgba(42,122,114,0.12)}
+.pathway.dashed{border-style:dashed;border-color:var(--taupe);background:rgba(46,43,39,0.6)}
+.pathway .badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;padding:3px 7px;border-radius:4px}
+.badge-solid{background:var(--teal-bg);color:#8FD4C8}
+.badge-dashed{background:var(--olive);color:var(--taupe-light)}
 .badge-unsafe{background:var(--orange-bg);color:#F0A888}
 .badge-safe{background:var(--teal-bg);color:#8FD4C8}
 .badge-verify{background:var(--amber-bg);color:#E8B87A}
-.product-meta{font-size:12px;color:var(--cream-dim)}
-.product-alt{font-size:12px;color:var(--teal);margin-top:4px}
-.check-item{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid rgba(62,55,48,0.45);font-size:14px}
-.check-item:last-child{border-bottom:none}
-.check-box{flex-shrink:0;width:22px;height:22px;border:2px solid var(--taupe);border-radius:4px;margin-top:1px}
-.check-detail{font-size:12px;color:var(--taupe);margin-top:2px}
-details{background:rgba(46,43,39,0.92);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden}
-details summary{padding:14px;font-size:14px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:48px;color:var(--cream)}
-details summary::-webkit-details-marker{display:none}
-details summary::after{content:"+";font-size:18px;color:var(--champagne)}
-details[open] summary::after{content:"−"}
-details .detail-body{padding:0 14px 14px;font-size:13px;color:var(--cream-dim)}
-details .detail-body ul{padding-left:16px}
+.mat-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.mat-table th{text-align:left;padding:8px 6px;color:var(--champagne);font-weight:600;border-bottom:1px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:0.03em}
+.mat-table td{padding:10px 6px;border-bottom:1px solid rgba(62,55,48,0.45);color:var(--cream-dim);vertical-align:top}
+.mat-table tr:last-child td{border-bottom:none}
+.mat-table .mat-name{color:var(--cream);font-weight:600}
 footer{padding:20px 16px;font-size:12px;color:var(--taupe);text-align:center;border-top:1px solid rgba(62,55,48,0.45)}
 .muted{color:var(--taupe);font-size:12px}
 sup a{color:var(--champagne);text-decoration:none;font-size:10px}
 sup a:hover{text-decoration:underline}
-#ref1,#ref2,#ref3,#ref4,#ref5,#ref6,#ref7,#ref8,#ref9,#ref10,#ref11{scroll-margin-top:60px}
-@media(max-width:380px){.matrix-cols{grid-template-columns:1fr}.nav a{font-size:12px;padding:8px 10px}}
+[id^="ref"]{scroll-margin-top:60px}
 </style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Companion sections">
 <div class="nav-inner">
-<a href="#screen">1 · Screen</a>
-<a href="#history">2 · Assess</a>
-<a href="#distinctions">3 · Distinctions</a>
-<a href="#substitute">4 · Substitute</a>
-<a href="#encounter">5 · Checklists</a>
-<a href="#prepare">6 · Prepare</a>
-<a href="#rescue">7 · Rescue</a>
+<a href="#ags">1 · AGS</a>
+<a href="#decision">2 · Decision</a>
+<a href="#mechanism">3 · Mechanism</a>
+<a href="#materials">4 · Materials</a>
 <a href="#methods">Methods</a>
 </div>
 </nav>
+
 <header>
 <h1>AGS Companion</h1>
-<p class="principle">Verify source → substitute when possible → prepare for delayed reactions</p>
-<p class="caveat">Alpha-gal IgE titers and prior reactions do not predict future severity — risk-stratify, do not reflexively exclude.</p>
-<p class="muted" style="margin-top:8px;font-size:11px">v1.0 · Aug 2026 · Marielle He, MD, MS · Jordan Kai Simmons, MD · Babak Azizzadeh, MD, FACS</p>
+<p class="principle">SCREEN · SUBSTITUTE · PREVENT</p>
+<p class="caveat">Sensitization alone ≠ AGS. Risk-stratify — do not reflexively exclude.</p>
+<p class="muted" style="margin-top:8px;font-size:11px">v1.1 · Aug 2026 · Marielle He, MD, MS · Jordan Kai Simmons, MD · Babak Azizzadeh, MD, FACS</p>
 </header>
+
 <div class="disclaimer" role="note">
 <strong>Important disclaimer</strong><br>
-For licensed clinicians as decision-support only. Does not constitute medical advice or replace clinical judgment or institutional protocols. Always verify product source and REF with pharmacy. Authors and Facial Plastics BH assume no liability.
+For licensed clinicians as decision-support only. Does not constitute medical advice or replace clinical judgment or institutional protocols. Always verify product source and REF with pharmacy. Authors and Facial Plastics BH assume no liability. Premedication does not reliably prevent anaphylaxis.
 </div>
+
 <main>
-<section class="section open" id="screen">
+
+<!-- 01 AGS -->
+<section class="section open" id="ags">
 <div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
 <div class="section-num">1</div>
-<div class="section-title">Screening & Risk Stratification</div>
-<span class="section-tag tag-amber">Gather</span>
+<div class="section-title">Alpha-Gal Syndrome</div>
+<span class="section-tag tag-amber">Context</span>
 </div>
 <div class="section-body">
+
 <div class="card">
-<h3>Risk stratification — Axis 1: Likelihood patient has AGS</h3>
-<div class="key-value"><span class="k">Higher pre-test probability</span><span class="v">Recalled tick bite (~80–86%)<sup><a href="#ref1">1</a></sup> + endemic residence + delayed 2–6 h reactions<sup><a href="#ref2">2</a></sup></span></div>
-<div class="key-value"><span class="k">Endemic (high-seroprevalence) states</span><span class="v">AR ~31%, MO ~26%<sup><a href="#ref3">3</a></sup>; SE / Mid-Atlantic / Midwest / East-Central</span></div>
-<div class="key-value"><span class="k">Supportive history</span><span class="v">Outdoor exposure, nocturnal GI symptoms, multiple unexplained allergies, prior red-meat/dairy/gelatin reactions<sup><a href="#ref2">2</a>,<a href="#ref4">4</a></sup></span></div>
-<div class="key-value"><span class="k">Lower probability</span><span class="v">No tick exposure, non-endemic, immediate (not delayed) reactions<sup><a href="#ref2">2</a></sup></span></div>
-</div>
-<div class="card">
-<h3>Axis 2: Diagnostic confidence (α-gal IgE)</h3>
-<div class="key-value"><span class="k">< 0.1 kU/L</span><span class="v">Negative<sup><a href="#ref2">2</a></sup></span></div>
-<div class="key-value"><span class="k">≥ 0.1 kU/L</span><span class="v">Suggestive / positive<sup><a href="#ref2">2</a></sup></span></div>
-<div class="key-value"><span class="k">≥ 2 kU/L or > 2% total IgE</span><span class="v">>50% meat-challenge positivity<sup><a href="#ref5">5</a></sup></span></div>
-<div class="key-value"><span class="k">≥ 5.5 kU/L or ratio ≥ 2.12%</span><span class="v">≥95% positive predictive value<sup><a href="#ref6">6</a></sup></span></div>
-</div>
-<div class="card">
-<h3>Axis 3: Perioperative severity risk (drives management)</h3>
-<div class="key-value"><span class="k" style="color:#C45A35;font-weight:700">HIGH</span><span class="v">IV/parenteral animal-derived agents (gelatin hemostatics — Floseal/Surgiflo/Gelfoam, bovine/porcine thrombin, porcine heparin) + any cofactor (exercise, alcohol, NSAIDs) or prior anaphylaxis<sup><a href="#ref2">2</a>,<a href="#ref7">7</a>,<a href="#ref8">8</a></sup></span></div>
-<div class="key-value"><span class="k" style="color:#A86B32;font-weight:700">MODERATE</span><span class="v">Topical/implanted animal-derived material (collagen scaffolds, gut sutures) or oral gelatin excipients; positive IgE without high-risk route<sup><a href="#ref7">7</a>,<a href="#ref8">8</a></sup></span></div>
-<div class="key-value"><span class="k" style="color:#2A7A72;font-weight:700">LOWER</span><span class="v">Only non-mammalian agents planned (HA fillers, synthetic sutures/hemostatics, HPMC capsules); sensitized but avoidable exposure<sup><a href="#ref7">7</a></sup></span></div>
-</div>
-<div class="highlight">
-<p><strong>Stratify, do not exclude</strong></p>
-<p>Titer and prior reaction severity do not predict future severity. Cofactors lower the threshold, and reactions are inconsistent between exposures. Use the axes to set observation length and premedication — not to deny care.<sup><a href="#ref2">2</a></sup></p>
-</div>
-</div>
-</section>
-<section class="section" id="history">
-<div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
-<div class="section-num">2</div>
-<div class="section-title">AGS History</div>
-<span class="section-tag tag-amber">Gather</span>
-</div>
-<div class="section-body">
-<div class="card">
-<h3>Obtain from every suspected patient</h3>
+<h3>Definition</h3>
 <ul>
-<li>Known triggers (mammalian meat, dairy, gelatin, meds)</li>
-<li>Prior reactions — severity and exact timing</li>
-<li>Previously tolerated products / materials</li>
-<li>Cofactors: exercise, alcohol, NSAIDs</li>
-<li>Any available alpha-gal IgE result</li>
+<li>IgE allergy to galactose-α-1,3-galactose in nonprimate mammalian tissue/products.<sup><a href="#ref4">4</a></sup></li>
+<li>Needs compatible history + alpha-gal IgE; sensitization alone ≠ AGS.<sup><a href="#ref5">5</a></sup></li>
 </ul>
 </div>
+
+<div class="card">
+<h3>Context</h3>
+<ul>
+<li>Tick bites induce alpha-gal IgE.<sup><a href="#ref6">6</a></sup></li>
+<li>Oral: delayed 3–6 h. Parenteral: may be immediate.<sup><a href="#ref3">3</a></sup></li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Relevance to facial plastics</h3>
+<ul>
+<li>Gelatin, collagen, thrombin, grafts, implants, sutures, injectables.<sup><a href="#ref9">9</a></sup></li>
+<li>Animal origin often unlabeled; may vary by lot.<sup><a href="#ref8">8</a></sup></li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Epidemiology</h3>
+<ul>
+<li>90,018 suspected cases, 2017–2022.<sup><a href="#ref6">6</a></sup></li>
+<li>Up to 450,000 US affected since 2010 (CDC estimate).<sup><a href="#ref6">6</a></sup></li>
+<li>Serosurvey highs: AR 31.2%, MO 26.0% (blood donors, 2024–2025).<sup><a href="#ref13">13</a></sup></li>
+<li>Seroprevalence = sensitization, not disease.<sup><a href="#ref13">13</a></sup></li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Methods</h3>
+<p>Narrative synthesis: clinical/perioperative literature + CDC. Full methods and search note in Methods section below.</p>
+</div>
+
 </div>
 </section>
-<section class="section" id="distinctions">
+
+<!-- 02 CLINICAL DECISION -->
+<section class="section" id="decision">
+<div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
+<div class="section-num">2</div>
+<div class="section-title">Clinical Decision</div>
+<span class="section-tag tag-teal">Action</span>
+</div>
+<div class="section-body">
+
+<div class="highlight teal">
+<p style="font-size:15px;font-weight:700;color:var(--cream);margin:0">Takeaway: SCREEN · SUBSTITUTE · PREVENT</p>
+</div>
+
+<div class="card">
+<h3>Preprocedure checklist</h3>
+<div class="check-item"><div class="check-num">1</div><div>Confirm delayed meat/gelatin reactions, tick exposure, prior perioperative reactions.</div></div>
+<div class="check-item"><div class="check-num">2</div><div>Review severity, cofactors, alpha-gal IgE.</div></div>
+<div class="check-item"><div class="check-num">3</div><div>Audit drugs, hemostats, grafts, implants, sutures.</div></div>
+<div class="check-item"><div class="check-num">4</div><div>Verify animal origin (pharmacy/manufacturer).</div></div>
+<div class="check-item"><div class="check-num">5</div><div>Prefer nonmammalian/synthetic.</div></div>
+<div class="check-item"><div class="check-num">6</div><div>Document readiness + shared decision.</div></div>
+</div>
+
+<div class="card">
+<h3>Clinical caveats</h3>
+<ul>
+<li>No universal IgE threshold.</li>
+<li>Tolerance varies by route/product.</li>
+<li>Prior tolerance ≠ future safety.</li>
+<li>Verify every formulation.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Route matters</h3>
+<div class="box-pair">
+<div class="route-box">
+<h4>Oral</h4>
+<p>Delayed 3–6 h</p>
+</div>
+<div class="route-box accent">
+<h4>Parenteral</h4>
+<p>May be immediate</p>
+</div>
+</div>
+<div class="route-box" style="margin-top:8px">
+<h4>Implant</h4>
+<p>Persistent exposure — retained material may act as a nidus<sup><a href="#ref7">7</a>,<a href="#ref12">12</a></sup></p>
+</div>
+</div>
+
+<div class="card">
+<h3>Persistence = nidus risk</h3>
+<ul>
+<li>Risk tracks how long mammalian material stays in tissue.<sup><a href="#ref7">7</a>,<a href="#ref12">12</a></sup></li>
+<li><strong style="color:var(--cream)">Retained (high):</strong> xenogeneic ADM, xenograft bone/cartilage/tendon, bioprosthetic patches/valves — months–years.<sup><a href="#ref7">7</a>,<a href="#ref12">12</a></sup></li>
+<li><strong style="color:var(--cream)">Resorbable (injection only):</strong> collagen filler carriers (e.g. Bellafill carrier resorbs ~1 mo → PMMA only). Late nodule = PMMA, not alpha-gal.<sup><a href="#ref11">11</a></sup></li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- 03 MECHANISM -->
+<section class="section" id="mechanism">
 <div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
 <div class="section-num">3</div>
-<div class="section-title">Distinctions Matrix</div>
+<div class="section-title">Mechanism → Action</div>
 <span class="section-tag tag-amber">Core</span>
 </div>
 <div class="section-body">
-<p class="muted" style="margin-bottom:10px">Route determines timing. Timing does not predict severity.</p>
-<div class="matrix-row"><div class="matrix-label">Route</div><div class="matrix-cols"><div class="matrix-col"><h4>Immediate</h4><p>IV / parenteral / implanted</p></div><div class="matrix-col"><h4>Delayed</h4><p>Oral (meat, dairy, gelatin capsules)</p></div></div></div>
-<div class="matrix-row"><div class="matrix-label">Onset</div><div class="matrix-cols"><div class="matrix-col"><h4>Immediate</h4><p>Minutes</p></div><div class="matrix-col"><h4>Delayed</h4><p>2–6 h (often 3–5 h)</p></div></div></div>
-<div class="matrix-row"><div class="matrix-label">Perioperative relevance</div><div class="matrix-cols"><div class="matrix-col"><h4>Immediate</h4><p>Intra-op anaphylaxis</p></div><div class="matrix-col"><h4>Delayed</h4><p>Post-discharge — extended monitoring</p></div></div></div>
-<div class="card" style="margin-top:12px"><h3>Sensitization kinetics</h3><ul><li>Rises over weeks–months after tick bite</li><li>Wanes with tick avoidance</li><li>Boosts with repeat bites</li></ul></div>
+
+<p class="muted" style="margin-bottom:12px">Legend: <strong style="color:#8FD4C8">SOLID</strong> = supported (human data) · <strong style="color:var(--taupe-light)">DASHED</strong> = plausible (hypothesis)</p>
+
+<div class="pathway solid">
+<h3 style="font-size:14px;color:var(--cream);margin-bottom:6px">Established pathway</h3>
+<p style="font-size:14px;color:var(--cream-dim)">Tick → Alpha-gal IgE → Mammalian product → Reaction</p>
+<div class="badge-row">
+<span class="badge badge-solid">Screen detects this</span>
+<span class="badge badge-solid">Human data (cetuximab)</span>
+</div>
+<p class="muted" style="margin-top:8px">Lane 1 = human data (cetuximab).<sup><a href="#ref1">1</a>,<a href="#ref12">12</a></sup></p>
+</div>
+
+<div class="pathway dashed">
+<h3 style="font-size:14px;color:var(--cream);margin-bottom:6px">Emerging hypothesis</h3>
+<p style="font-size:14px;color:var(--cream-dim)">Xenogeneic product ⇢ New alpha-gal IgE? ⇢ Future reaction?</p>
+<div class="badge-row">
+<span class="badge badge-dashed">Screening can't predict this</span>
+<span class="badge badge-dashed">In-vitro / animal only</span>
+</div>
+<p class="muted" style="margin-top:8px">Lane 2 = in-vitro/animal — human de novo sensitization unestablished.<sup><a href="#ref7">7</a>,<a href="#ref8">8</a></sup></p>
+</div>
+
 </div>
 </section>
-<section class="section" id="substitute">
+
+<!-- 04 MATERIALS -->
+<section class="section" id="materials">
 <div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
 <div class="section-num">4</div>
-<div class="section-title">Substitution Tables</div>
-<span class="section-tag tag-teal">Action</span>
-</div>
-<div class="section-body"><div id="substitute-list"></div></div>
-</section>
-<section class="section" id="encounter">
-<div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
-<div class="section-num">5</div>
-<div class="section-title">Encounter Checklists & Pharmacy</div>
+<div class="section-title">Material Risk by Evidence</div>
 <span class="section-tag tag-teal">Action</span>
 </div>
 <div class="section-body">
-<details><summary>Cosmetic surgery — Verify all materials</summary><div class="detail-body"><ul><li>Confirm source of implants, grafts, fillers, sutures</li><li>Flag gelatin hemostatics and animal-origin matrices</li></ul></div></details>
-<details><summary>Minimally invasive — Check ingredient source</summary><div class="detail-body"><ul><li>Screen injectables for gelatin / animal excipients</li><li>Confirm HA fillers are bacterial-fermentation origin</li></ul></div></details>
-<details><summary>Other facial plastics — Assess likely exposures</summary><div class="detail-body"><ul><li>Evaluate dressings, biologics, hemostatic agents</li><li>Plan extended observation if mammalian material used</li></ul></div></details>
-<div class="cat-header">Pharmacy verification</div>
-<div class="card"><div id="pharmacy-list"></div></div>
+
+<div class="card" style="overflow-x:auto">
+<table class="mat-table">
+<thead>
+<tr><th>Material / exposure</th><th>Evidence</th><th>Response</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="mat-name">Gelatin hemostats; animal thrombin</td>
+<td>Demonstrated</td>
+<td>Human reactions reported. Use recombinant/nonmammalian.<sup><a href="#ref7">7</a>,<a href="#ref9">9</a></sup></td>
+</tr>
+<tr>
+<td class="mat-name">Bovine/porcine matrices, xenografts</td>
+<td>Demonstrated (analogous implants)</td>
+<td>Alpha-gal persists post-decellularization; facial ADM untested. Confirm species.<sup><a href="#ref7">7</a>,<a href="#ref8">8</a></sup></td>
+</tr>
+<tr>
+<td class="mat-name">Porcine UFH; high-dose IV UFH</td>
+<td>Clinical signal</td>
+<td>Varies by titer; highest with IV. Check sIgE; risk-stratify, don't universally exclude.</td>
+</tr>
+<tr>
+<td class="mat-name">Bovine-collagen PMMA filler; facial ADM; catgut; collagen implants/adhesives</td>
+<td>Mammalian / untested</td>
+<td>Composition established, brand assays absent. FDA: PMMA carrier = bovine collagen. Verify IFU.<sup><a href="#ref10">10</a></sup></td>
+</tr>
+<tr>
+<td class="mat-name">Autologous / human; confirmed synthetic / nonmammalian</td>
+<td>Lower risk</td>
+<td>Autologous fat/cartilage/fascia; select HA, CaHA, PLLA; synthetic sutures; cyanoacrylate. Verify every formulation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="highlight">
+<p><strong>Evidence gap</strong></p>
+<p>No study quantifies alpha-gal reactions in cosmetic/aesthetic procedures. Alpha-gal not directly assayed in any facial plastics brand; brand risk inferred from sourcing. Extrapolated from anesthesia, cardiac surgery, in-vitro, and animal data. “Lower risk” = sourcing, not a verified assay.</p>
+<p style="margin-top:8px"><em>Specialist input required when mammalian material is unavoidable; premedication does not reliably prevent anaphylaxis.</em></p>
+</div>
+
+<div class="card">
+<h3>Named products (verify REF)</h3>
+<p class="muted" style="margin-bottom:8px">Traceable examples — always re-check with pharmacy.</p>
+<div class="check-item"><span class="badge badge-unsafe">Substitute</span><div style="margin-left:8px"><strong style="color:var(--cream)">Gelfoam · Surgiflo · Floseal</strong> — porcine/bovine gelatin<br><span class="muted">→ Surgicel, Arista AH</span></div></div>
+<div class="check-item"><span class="badge badge-unsafe">Substitute</span><div style="margin-left:8px"><strong style="color:var(--cream)">Thrombin-JMI</strong> — bovine<br><span class="muted">→ Recothrom (recombinant)</span></div></div>
+<div class="check-item"><span class="badge badge-unsafe">Substitute</span><div style="margin-left:8px"><strong style="color:var(--cream)">Gut sutures · porcine heparin</strong></div></div>
+<div class="check-item"><span class="badge badge-safe">Preferred</span><div style="margin-left:8px"><strong style="color:var(--cream)">Surgicel · Arista AH · Recothrom · synthetic absorbable · bacterial-fermentation HA</strong></div></div>
+</div>
+
 </div>
 </section>
-<section class="section" id="prepare">
-<div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
-<div class="section-num">6</div>
-<div class="section-title">Preparedness & Monitoring</div>
-<span class="section-tag tag-amber">Prepare</span>
-</div>
-<div class="section-body">
-<div class="card">
-<h3>Tier-based observation & premedication (unavoidable mammalian agent)</h3>
-<p class="muted" style="margin-bottom:10px">Expert-opinion / extrapolated — no validated tier-specific protocol exists. Durations derive from the 2–6 h (up to ~10 h) delayed-reaction window, not fixed cutoffs.<sup><a href="#ref2">2</a>,<a href="#ref9">9</a></sup></p>
-<div style="border-left:3px solid #C45A35;padding-left:12px;margin-bottom:12px">
-<p style="font-weight:700;color:#C45A35;margin-bottom:4px">HIGH</p>
-<p style="font-size:13px;color:var(--cream-dim);margin-bottom:4px"><strong style="color:var(--cream)">Premedication:</strong> corticosteroid + H1 (± H2) antihistamine before the agent; A/I supervision; IM epinephrine drawn up.<sup><a href="#ref2">2</a>,<a href="#ref10">10</a></sup></p>
-<p style="font-size:13px;color:var(--cream-dim);margin-bottom:4px"><strong style="color:var(--cream)">Observation:</strong> continuous monitoring spanning the full delayed window (≥6 h, extend toward ~10 h); low threshold for overnight admission — especially after severe initial reaction or repeat epinephrine.<sup><a href="#ref9">9</a>,<a href="#ref11">11</a></sup></p>
-<p style="font-size:13px;color:var(--cream-dim)">Prefer route/product substitution (SC LMWH over IV UFH) over reliance on premedication.<sup><a href="#ref2">2</a></sup></p>
-</div>
-<div style="border-left:3px solid #A86B32;padding-left:12px;margin-bottom:12px">
-<p style="font-weight:700;color:#A86B32;margin-bottom:4px">MODERATE</p>
-<p style="font-size:13px;color:var(--cream-dim);margin-bottom:4px"><strong style="color:var(--cream)">Premedication:</strong> consider corticosteroid + antihistamine per A/I; epinephrine available.<sup><a href="#ref2">2</a></sup></p>
-<p style="font-size:13px;color:var(--cream-dim)"><strong style="color:var(--cream)">Observation:</strong> prolonged monitoring through the delayed window; do not discharge at the standard 1 h biphasic mark.<sup><a href="#ref9">9</a>,<a href="#ref11">11</a></sup></p>
-</div>
-<div style="border-left:3px solid #2A7A72;padding-left:12px;margin-bottom:12px">
-<p style="font-weight:700;color:#2A7A72;margin-bottom:4px">LOWER</p>
-<p style="font-size:13px;color:var(--cream-dim);margin-bottom:4px"><strong style="color:var(--cream)">Premedication:</strong> not routinely indicated.<sup><a href="#ref7">7</a></sup></p>
-<p style="font-size:13px;color:var(--cream-dim)"><strong style="color:var(--cream)">Observation:</strong> routine postoperative monitoring; counsel on delayed symptoms and epinephrine use.<sup><a href="#ref9">9</a></sup></p>
-</div>
-<div class="highlight red" style="margin-top:8px">
-<p style="font-size:13px;color:var(--cream-dim);margin:0">Adjuncts (antihistamines, corticosteroids) do <strong style="color:var(--cream)">not</strong> treat or prevent IgE-mediated anaphylaxis — IM epinephrine 0.01 mg/kg (max 0.3 mg peds / 0.5 mg adult) remains first-line if a reaction occurs.<sup><a href="#ref11">11</a></sup></p>
-</div>
-</div>
-<div class="card">
-<h3>Observation principle</h3>
-<p><strong>Observe 2–6 h</strong> (longer if a reaction is treated).</p>
-</div>
-<div class="card">
-<h3>Ready at discharge</h3>
-<ul>
-<li>Epinephrine autoinjector when appropriate</li>
-<li>Written delayed-reaction precautions</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="section" id="rescue">
-<div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
-<div class="section-num">7</div>
-<div class="section-title">Emergency Protocol</div>
-<span class="section-tag tag-red">Emergency</span>
-</div>
-<div class="section-body">
-<div class="highlight red">
-<p><strong>Epinephrine first</strong></p>
-<p>0.01 mg/kg IM (max 0.3 mg pediatric / 0.5 mg adult), anterolateral thigh.</p>
-</div>
-<div class="card">
-<h3>Tryptase</h3>
-<div class="key-value"><span class="k">Acute</span><span class="v">~30 min – 2 h after onset</span></div>
-<div class="key-value"><span class="k">Baseline</span><span class="v">≥ 24 h later</span></div>
-</div>
-</div>
-</section>
+
+<!-- METHODS -->
 <section class="section" id="methods">
 <div class="section-header" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0">
 <div class="section-num">•</div>
@@ -267,36 +326,45 @@ For licensed clinicians as decision-support only. Does not constitute medical ad
 </div>
 <div class="section-body">
 <div class="card">
-<p class="muted" style="margin-bottom:12px">Narrative review (not systematic). Sources: PubMed / Embase / Cochrane / CDC. Searched 2010–2026; key reviews hand-searched. Non-exhaustive; selected for clinical relevance to facial plastics / perioperative exposure. Numbering is local to this companion.</p>
-<ol style="font-size:12px;color:var(--cream-dim);padding-left:18px;line-height:1.6">
-<li id="ref1" style="margin-bottom:8px">Binder AM, et al. Clinical and Laboratory Features of Patients Diagnosed With Alpha-Gal Syndrome, 2010–2019. <em>Allergy</em>. 2023.</li>
-<li id="ref2" style="margin-bottom:8px">Iglesia EGA, et al. Management of Food Allergies and Food-Related Anaphylaxis. <em>JAMA</em>. 2024.</li>
-<li id="ref3" style="margin-bottom:8px">Saunders EF, et al. Alpha-Gal IgE Seroprevalence Among Blood Donors — 10 States, 2024–2025. <em>MMWR</em>. 2026.</li>
-<li id="ref4" style="margin-bottom:8px">McGill SK, et al. AGA Clinical Practice Update on Alpha-Gal Syndrome for the GI Clinician. <em>Clin Gastroenterol Hepatol</em>. 2023.</li>
-<li id="ref5" style="margin-bottom:8px">Iglesia EGA, et al. Management of Food Allergies and Food-Related Anaphylaxis (challenge-positivity thresholds). <em>JAMA</em>. 2024.</li>
-<li id="ref6" style="margin-bottom:8px">Mabelane T, et al. Predictive Values of Alpha-Gal IgE Levels and Alpha-Gal IgE:Total IgE Ratio in Oral Food Challenge–Proven Meat Allergy. <em>Pediatr Allergy Immunol</em>. 2018.</li>
-<li id="ref7" style="margin-bottom:8px">Iglesia EGA, et al. Management of Food Allergies and Food-Related Anaphylaxis (tiered avoidance). <em>JAMA</em>. 2024.</li>
-<li id="ref8" style="margin-bottom:8px">Nourian MM, et al. Perioperative Implications of Patients With Alpha-Gal Allergies. <em>J Clin Anesth</em>. 2023.</li>
-<li id="ref9" style="margin-bottom:8px">Reddy S, et al. Alpha-Gal Syndrome: A Review for the Dermatologist. <em>J Am Acad Dermatol</em>. 2023.</li>
-<li id="ref10" style="margin-bottom:8px">Hawkins RB, et al. Safety of Intravenous Heparin for Cardiac Surgery in Patients With Alpha-Gal Syndrome. <em>Ann Thorac Surg</em>. 2021.</li>
-<li id="ref11" style="margin-bottom:8px">Rubin S, et al. Anaphylaxis: Guidelines From the Joint Task Force on Allergy-Immunology Practice Parameters. <em>Am Fam Physician</em>. 2024.</li>
+<p class="muted" style="margin-bottom:12px">Narrative synthesis (not systematic). Sources: clinical and perioperative literature + CDC. Searched 2010–2026; key reviews hand-searched. Non-exhaustive; selected for relevance to facial plastics / perioperative exposure. Numbering is local to this companion.</p>
+<ol style="font-size:12px;color:var(--cream-dim);padding-left:18px;line-height:1.65">
+<li id="ref1" style="margin-bottom:10px">Chung CH, et al. Cetuximab-induced anaphylaxis and IgE specific for galactose-α-1,3-galactose. <em>N Engl J Med</em>. 2008.</li>
+<li id="ref2" style="margin-bottom:10px">Commins SP, Platts-Mills TAE. Anaphylaxis syndromes related to a new mammalian cross-reactive carbohydrate determinant. <em>J Allergy Clin Immunol</em>. 2009.</li>
+<li id="ref3" style="margin-bottom:10px">Platts-Mills TAE, et al. Diagnosis and management of patients with the α-gal syndrome. <em>J Allergy Clin Immunol Pract</em>. 2020.</li>
+<li id="ref4" style="margin-bottom:10px">Reddy S, et al. Alpha-Gal Syndrome: A Review for the Dermatologist. <em>J Am Acad Dermatol</em>. 2023.</li>
+<li id="ref5" style="margin-bottom:10px">Wilson JM, et al. (sensitization vs clinical AGS). <em>Allergy</em>. 2024.</li>
+<li id="ref6" style="margin-bottom:10px">Thompson JM, et al. Geographic Distribution of Suspected Alpha-Gal Syndrome Cases — United States, January 2017–December 2022. <em>MMWR</em>. 2023.</li>
+<li id="ref7" style="margin-bottom:10px">Kuravi KV, et al. Allergic response to medical products in patients with alpha-gal syndrome. <em>J Thorac Cardiovasc Surg</em>. 2022;164(6). PMID 33933257.</li>
+<li id="ref8" style="margin-bottom:10px">Zhang YY, et al. (alpha-gal persistence post-decellularization). <em>Tissue Eng Part C Methods</em>. 2025. PMID 40314122.</li>
+<li id="ref9" style="margin-bottom:10px">Razzaq BW, et al. Complex spine surgery in the setting of alpha-gal syndrome. <em>World Neurosurg</em>. 2025. PMID 41205864.</li>
+<li id="ref10" style="margin-bottom:10px">Ortiz AE, et al. (PMMA / Bellafill carrier). <em>Dermatol Surg</em>. 2020.</li>
+<li id="ref11" style="margin-bottom:10px">Lemperle G, et al. ArteFill permanent injectable for soft tissue augmentation. <em>Aesthetic Plast Surg</em>. 2010;34(3):264–72.</li>
+<li id="ref12" style="margin-bottom:10px">Iglesia EGA, et al. Management of Food Allergies and Food-Related Anaphylaxis. <em>JAMA</em>. 2024;331(6):510–521.</li>
+<li id="ref13" style="margin-bottom:10px">Saunders EF, et al. Alpha-Gal Immunoglobulin E Seroprevalence Among Blood Donors — 10 States, 2024–2025. <em>MMWR</em>. 2026.</li>
 </ol>
-<p class="muted" style="margin-top:14px">v1.0 · Aug 2026 · © authors, CC BY 4.0 · Product data verified 2026-08-18 · Facial Plastics BH</p>
+<p class="muted" style="margin-top:14px">v1.1 · Aug 2026 · © authors, CC BY 4.0 · Facial Plastics BH</p>
 </div>
 </div>
 </section>
+
 </main>
+
 <footer>
-For licensed clinician use only · Not a substitute for clinical judgment · v1.0 Aug 2026<br>
+For licensed clinician use only · Not a substitute for clinical judgment · v1.1 Aug 2026<br>
 <span style="opacity:0.6;font-size:11px">© authors, CC BY 4.0 · Facial Plastics BH · Decision-support reference only</span>
 </footer>
+
 <script>
-const PRODUCTS=[{name:"Gelfoam",category:"Hemostatics",detail:"Absorbable gelatin sponge",manufacturer:"Pfizer",ref:"—",source:"Porcine gelatin",safety:"unsafe",alternatives:["Surgicel","Arista AH"],verified:"2026-08-18"},{name:"Surgiflo",category:"Hemostatics",detail:"Hemostatic matrix",manufacturer:"Ethicon",ref:"—",source:"Porcine gelatin",safety:"unsafe",alternatives:["Surgicel"],verified:"2026-08-18"},{name:"Floseal",category:"Hemostatics",detail:"Hemostatic matrix",manufacturer:"Baxter",ref:"—",source:"Bovine gelatin + thrombin",safety:"unsafe",alternatives:["Surgicel"],verified:"2026-08-18"},{name:"Surgicel",category:"Hemostatics",detail:"Oxidized cellulose",manufacturer:"Ethicon",ref:"—",source:"Plant-derived",safety:"safe",alternatives:[],verified:"2026-08-18"},{name:"Arista AH",category:"Hemostatics",detail:"Plant polysaccharide powder",manufacturer:"BD",ref:"—",source:"Plant starch",safety:"safe",alternatives:[],verified:"2026-08-18"},{name:"Thrombin-JMI",category:"Thrombin",detail:"Topical bovine thrombin",manufacturer:"Pfizer",ref:"—",source:"Bovine",safety:"unsafe",alternatives:["Recothrom"],verified:"2026-08-18"},{name:"Recothrom",category:"Thrombin",detail:"Recombinant human thrombin",manufacturer:"Baxter",ref:"—",source:"Recombinant",safety:"safe",alternatives:[],verified:"2026-08-18"},{name:"Porcine heparin",category:"Anticoagulants",detail:"UFH / LMWH",manufacturer:"Various",ref:"—",source:"Porcine",safety:"unsafe",alternatives:["Verify non-porcine options"],verified:"2026-08-18"},{name:"Gelatin capsules",category:"Oral / Capsules",detail:"Hard or soft shells",manufacturer:"Various",ref:"—",source:"Bovine or porcine gelatin",safety:"unsafe",alternatives:["HPMC capsules"],verified:"2026-08-18"},{name:"HPMC capsules",category:"Oral / Capsules",detail:"Plant-derived shells",manufacturer:"Various",ref:"—",source:"HPMC",safety:"safe",alternatives:[],verified:"2026-08-18"},{name:"HA fillers (bacterial fermentation)",category:"Fillers",detail:"Most modern HA fillers",manufacturer:"Various",ref:"—",source:"Bacterial fermentation",safety:"safe",alternatives:[],verified:"2026-08-18"},{name:"Gut sutures",category:"Sutures",detail:"Absorbable animal-origin",manufacturer:"Various",ref:"—",source:"Sheep / bovine",safety:"unsafe",alternatives:["Synthetic absorbable"],verified:"2026-08-18"},{name:"Synthetic absorbable sutures",category:"Sutures",detail:"Vicryl, PDS, Monocryl",manufacturer:"Ethicon",ref:"—",source:"Synthetic",safety:"safe",alternatives:[],verified:"2026-08-18"}];
-function badgeFor(s){if(s==="unsafe")return'<span class="badge badge-unsafe">Mammalian — substitute</span>';if(s==="safe")return'<span class="badge badge-safe">Traceable safe</span>';return'<span class="badge badge-verify">Verify source</span>'}
-function renderSubstitute(){const host=document.getElementById("substitute-list");const cats=[...new Set(PRODUCTS.map(p=>p.category))];host.innerHTML=cats.map(cat=>{const items=PRODUCTS.filter(p=>p.category===cat).map(p=>`<div class="product-card"><div class="product-head"><span class="product-name">${p.name}</span>${badgeFor(p.safety)}</div><div class="product-meta">${p.detail} · ${p.manufacturer}</div><div class="product-meta">Source: ${p.source}</div>${p.alternatives.length?`<div class="product-alt">→ ${p.alternatives.join(", ")}</div>`:""}</div>`).join("");return`<div class="cat-header">${cat}</div>${items}`}).join("")}
-function renderPharmacy(){document.getElementById("pharmacy-list").innerHTML=PRODUCTS.filter(p=>p.safety!=="safe").map(p=>`<div class="check-item"><div class="check-box"></div><div><div>${p.name}</div><div class="check-detail">Confirm source${p.alternatives.length?` · sub: ${p.alternatives[0]}`:""}</div></div></div>`).join("")}
-renderSubstitute();renderPharmacy();
-document.querySelectorAll(".nav a").forEach(a=>{a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t){t.classList.add("open");t.scrollIntoView({behavior:"smooth",block:"start"})}})});
+document.querySelectorAll(".nav a").forEach(a=>{
+  a.addEventListener("click",e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute("href"));
+    if(t){t.classList.add("open");t.scrollIntoView({behavior:"smooth",block:"start"})}
+  });
+});
+document.querySelectorAll(".section-header").forEach(h=>{
+  h.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();h.click()}});
+});
 </script>
 </body>
 </html>

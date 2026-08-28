@@ -1,5 +1,5 @@
 # Tick-Primed Hypersensitivity companion
 
-Public type-in: https://tinyurl.com/agscomp
+Type-in (working): https://tinyurl.com/tph-companion
 
-Static conference companion (audio, transcripts, references).
+`tinyurl.com/tphags` is retired — it pointed at an unpublished app page.

@@ -1,5 +1,7 @@
 # Tick-Primed Hypersensitivity companion
 
-Type-in (working): https://tinyurl.com/tph-companion
+Live companion (most current, with reviews):
+https://bolt-glade-glade-tulip.grok.me
 
-`tinyurl.com/tphags` is retired — it pointed at an unpublished app page.
+Static mirror (submitted QR):
+https://curiousmarielle-gif.github.io/

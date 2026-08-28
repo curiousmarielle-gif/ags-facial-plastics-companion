@@ -1,2 +1,5 @@
-# ags-facial-plastics-companion
-AGS Companion for Facial Plastics — clinician decision-support (Screen → Assess → Distinctions → Substitute → Checklists → Prepare → Rescue). For licensed clinician use only.
+# Tick-Primed Hypersensitivity companion
+
+Public type-in: https://tinyurl.com/agscomp
+
+Static conference companion (audio, transcripts, references).
